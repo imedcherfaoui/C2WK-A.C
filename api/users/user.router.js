@@ -5,6 +5,7 @@ const {
   getUsers,
   getUserbyId,
 } = require("./user.controller");
+
 const router = require("express").Router();
 
 router.post("/register", createUser);

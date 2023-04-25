@@ -3,13 +3,16 @@ require("dotenv").config();
 //Installation d'express
 const express = require("express");
 const app = express();
-//Import user Router
+//Import Router
 const userRouter = require("./api/users/user.router");
+const productRouter = require("./api/products/product.router");
 
 //Gérer les données des requettes HTTP
 app.use(express.json());
 
-app.use("/", userRouter);
+//Gérer les routes
+app.use("/", [userRouter, productRouter]);
+
 app.listen(process.env.APP_PORT, () => {
   console.log("Server up and running !");
 });
