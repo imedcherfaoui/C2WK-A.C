@@ -9,12 +9,12 @@ function App() {
       .then((res) => res.json())
       .then((data) => setBackendData(data));
   }, []);
-
+  
   return (
     <div>
-      {(typeof backendData === 'undefined') ? <p>Loading...</p> : 
+      {(typeof backendData.data === 'undefined') ? <p>Loading...</p> : 
         <ul>
-          {backendData.map((item, index) => (
+          {backendData.data.map((item, index) => (
             <li key={index}>{item.name}</li>
           ))}
         </ul>
