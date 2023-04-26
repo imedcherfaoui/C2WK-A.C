@@ -3,8 +3,8 @@ const pool = require("../../config/database");
 module.exports = {
   create: (data, callBack) => {
     pool.query(
-      `INSERT INTO products(name, description, price) VALUES (?,?,?)`,
-      [data.name, data.description, data.price],
+      `INSERT INTO products(name, description, inspiration, fabric, image, price, category, sexe, stock, promo) VALUES (?,?,?,?,?,?,?,?,?,?)`,
+      [data.name, data.description,data.inspiration, data.fabric, data.image, data.price, data.category, data.sexe, data.stock, data.promo, data.id],
       (error, results, fields) => {
         if (error) {
           return callBack(error);
@@ -35,8 +35,8 @@ module.exports = {
   },
   updateProduct: (data, callBack) => {
     pool.query(
-      `UPDATE products SET name=?, description=?, price=? where id=?`,
-      [data.name, data.description, data.price, data.id],
+      `UPDATE products SET name=?, description=?, inspiration=?, fabric=?, image=?, price=?, category=?, sexe=?, stock=?, promo=? where id=?`,
+      [data.name, data.description,data.inspiration, data.fabric, data.image, data.price, data.category, data.sexe, data.stock, data.promo, data.id],
       (error, results, fields) => {
         if (error) {
           return callBack(error);
