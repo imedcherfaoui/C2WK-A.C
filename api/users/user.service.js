@@ -3,9 +3,9 @@ const pool = require("../../config/database");
 module.exports = {
   create: (data, callBack) => {
     pool.query(
-      `INSERT INTO users(username, password, role, email, adresse) 
+      `INSERT INTO users(username, password, role, email, address) 
             VALUES (?,?,?,?,?)`,
-      [data.username, data.password, data.role, data.email, data.adresse],
+      [data.username, data.password, data.role, data.email, data.address],
       (error, results, fields) => {
         if (error) {
           return callBack(error);
@@ -15,7 +15,7 @@ module.exports = {
     );
   },
   getUsers: (callBack) => {
-    pool.query(`SELECT * FROM users`, [], (error, results, fields) => {
+    pool.query(`SELECT id,username,role,email,address FROM users`, [], (error, results, fields) => {
       if (error) {
         return callBack(error);
       }
@@ -23,7 +23,7 @@ module.exports = {
     });
   },
   getUserbyId: (id, callBack) => {
-    pool.query(`SELECT * FROM users WHERE id = ?`,
+    pool.query(`SELECT id,username,role,email,address FROM users WHERE id = ?`,
     [id],
     (error, results, fields) => {
       if (error) {
