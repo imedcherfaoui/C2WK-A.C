@@ -1,0 +1,17 @@
+//JACKETS CATEGORY "J"
+
+INSERT INTO products(name, description, inspiration, fabric, image, price, category, sexe, stock, promo) VALUES 
+("OVERDYED INDIGO SHIPYARD JACKET - 3/3", "This jacket is inspired by a rare French shipyard jacket from 30's. To respect this legacy all of our jackets are handmade with vintage equipments in Paris.", "1935 shipyard jacket - Over dyed indigo treatment", "Vintage Transport Bag form East Europe", "./assets/images/jackets/OVERDYED_INDIGO_SHIPYARD_JACKET_3-3_1.webp", 120.00, "JACKET", "H", 50, 0), 
+("OVERDYED INDIGO SHIPYARD JACKET - 2/3", "This jacket is inspired by a rare French shipyard jacket from 30's. To respect this legacy all of our jackets are handmade with vintage equipments in Paris.", "1935 shipyard jacket - Over dyed indigo treatment", "Vintage Transport Bag form East Europe", "./assets/images/jackets/OVERDYED_INDIGO_SHIPYARD_JACKET_2-3_1.webp", 120.00, "JACKET", "H", 50, 0),
+("OVERDYED INDIGO SHIPYARD JACKET - 1/3", "This jacket is inspired by a rare French shipyard jacket from 30's. To respect this legacy all of our jackets are handmade with vintage equipments in Paris.", "1935 shipyard jacket - Over dyed indigo treatment", "Vintage Transport Bag form East Europe", "./assets/images/jackets/OVERDYED_INDIGO_SHIPYARD_JACKET_1-3_1.jpg", 120.00, "JACKET", "H", 50, 0),
+("DENIM PAINTER JACKET", "This jacket is inspired by an old American chore jacket in our archives. To respect this legacy all of our jackets are handmade with vintage equipments in Paris.", "1940's American workwear jacket", "Japanese Denim 100% cotton", "./assets/images/jackets/DENIM_PAINTER_JACKET_1_blue.webp", 80.00, "JACKET", "H", 50, 0),
+("ALPINE 1950 CANVAS - NAVY", "This jacket is inspired by a 1950s French alpine jacket in our archives.", "1950 summer alpinism jacket.", "100% Heavy Cotton Canvas", "./assets/images/jackets/ALPINE_1950_CANVAS-NAVY_1.webp", 100.00, "JACKET", "H", 50, 0),
+("REWORK SHIPYARD JACKET - 8/12", "This jacket is inspired by a rare French shipyard jacket from 30's. To respect this legacy all of our jackets are handmade with vintage equipments in Paris.", "1935 shipyard jacket", "Vintage Transport Bag form East Europe", "./assets/images/jackets/REWORK_SHIPYARD_JACKET_8-12_1.webp", 200, "JACKET", "H", 50, 0);
+
+
+//SWEATS CATEGORY "S"
+
+INSERT INTO products(name, description, inspiration, fabric, image, price, category, sexe, stock, promo) VALUES
+("BEST SWEAT - GREY", "This sweatshirt was made by the brut team, to match our wishes and morphology. After many samples we finally found the best heavy-weight fleece to make THE BEST sweatshirt !", "1970's BOXY VINTAGE AMERICAN SWEATSHIRT", "Heavy weight 420gsm 100% Cotton", "./assets/images/top/BEST_SWEAT-GREY_1.webp", 100.00, "SWEAT", "H", 50, 0),
+("QUARTER ZIPPER - GREEN", "Classic fit with a retro zipper style and a square chest pocket with pretty stitching details.", "1950's Jersey Sportswear Quartez Zipper", "Heavy weight 440gsm, 100% Cotton", "./assets/images/top/QUARTER_ZIPPER-GREEN_1.webp", 80.00, "SWEAT", "H", 50, 0),
+("TEAM HOODIE - GREEN", "This sweatshirt was made by the brut team, to match our wishes and morphology with an handmade chainstitched 2022 BRUT logo.", "1970's BOXY VINTAGE AMERICAN SWEATSHIRT", "Heavy weight 490gsm 100% Cotton", "./assets/images/top/TEAM_HOODIE-GREEN_1.webp", 80.00, "SWEAT", "H", 50, 0);
