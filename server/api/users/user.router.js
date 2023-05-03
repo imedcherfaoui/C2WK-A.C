@@ -4,14 +4,14 @@ const {
   deleteUser,
   getUsers,
   getUserbyId,
-  login
+  login,
 } = require("./user.controller");
 
 const router = require("express").Router();
 const { checkToken } = require("../../auth/token_validation");
 
 router.post("/register", checkToken, createUser);
-router.get("/users", checkToken, getUsers);
+router.get("/users", getUsers);
 router.put("/user", checkToken, updateUser);
 router.delete("/user", checkToken, deleteUser);
 router.get("/user/:id", checkToken, getUserbyId);

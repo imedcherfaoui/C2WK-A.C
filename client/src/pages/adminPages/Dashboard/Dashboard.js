@@ -3,7 +3,7 @@ import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import Index from "./scenes/dashboard/index";
+import { Outlet } from "react-router-dom";
 
 function Dashboard() {
   const [theme, colorMode] = useMode();
@@ -16,7 +16,7 @@ function Dashboard() {
           <Sidebar />
           <main className="content">
             <Topbar />
-            <Index />
+            <Outlet />
           </main>
         </div>
       </ThemeProvider>
