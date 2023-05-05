@@ -1,35 +1,23 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/userPages/Home/Home";
-import Dashboard from "./pages/adminPages/Dashboard/Dashboard";
+import NavigationBar from "./components/navbar/navbar/navbar";
+import Register from "./pages/userPages/Register/Register";
+import Login from "./pages/userPages/Login/Login";
 
 function App() {
-  const [backendData, setBackendData] = useState([{}]);
-
-  useEffect(() => {
-    fetch("/products")
-      .then((res) => res.json())
-      .then((data) => setBackendData(data));
-  }, []);
-
+  
   return (
     <Router>
+      <NavigationBar />
       <div>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
-
-        {typeof backendData.data === "undefined" ? (
-          <p>Loading...</p>
-        ) : (
-          <ul>
-            {backendData.data.map((item, index) => (
-              <li key={index}>{item.name}</li>
-            ))}
-          </ul>
-        )}
       </div>
     </Router>
   );

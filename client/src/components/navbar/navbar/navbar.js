@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NavbarData } from './navbardata';
 import './navbar.css';
@@ -12,7 +12,21 @@ export default function NavigationBar() {
   function handleClick(link) {
     navigate(link);
   }
+  function logout() {
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
+    navigate('/Login');
+  }
 
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('token') !== null);
+  useEffect(() => {
+    // Check if token exists in localStorage
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+  
   return (
     <div className="sidebar">
       <img className="Logo" src={logo} alt="logo" onClick={() => {handleClick("/");}}/>
@@ -31,7 +45,7 @@ export default function NavigationBar() {
           );
         })}
       </ul>
-      <div className="left-nav">
+      <div className="left-nav d-flex">
         <button className="deco btn">
             <BsSearch size={20} />
         </button>
@@ -41,6 +55,28 @@ export default function NavigationBar() {
         <button className="deco btn">
             <CiUser size={20} />
         </button>
+        <div>
+        {isLoggedIn ? 
+          <button className="deco btn border" onClick={logout}>
+            Logout
+          </button> 
+          :
+          <div>
+            <button onClick={() => {
+                      handleClick('/Register');
+                    }} className="deco btn border">
+                    Sign Up
+              </button>
+              <button onClick={() => {
+                      handleClick('/Login');
+                    }} className="deco btn border">
+                    Sign In
+              </button>
+          </div>
+        }
+        </div>
+
+            
       </div>
     </div>
   );
