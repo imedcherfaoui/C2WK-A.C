@@ -16,6 +16,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import admin_icon from "../../images/admin_icon.png";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -94,7 +95,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="120px"
                   height="100px"
-                  src={`../../../../../assets/admin_icon.png`}
+                  src={admin_icon}
                   style={{
                     cursor: "pointer",
                     borderRadius: "50%",
@@ -147,8 +148,8 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Invoices Balances"
-              to="/invoices"
+              title="List of Orders"
+              to="/Dashboard/orders"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -163,8 +164,8 @@ const Sidebar = () => {
             </Typography>
 
             <Item
-              title="Profile Form"
-              to="/form"
+              title="Create User"
+              to="/Dashboard/adduser"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
