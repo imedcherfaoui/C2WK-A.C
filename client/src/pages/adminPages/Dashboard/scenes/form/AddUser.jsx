@@ -29,7 +29,7 @@ const AddUser = () => {
     axios
       .post("http://localhost:3100/register", values)
       .then(() => {
-        Navigate("/admin/dashboard");
+        Navigate("/dashboard/adduser");
       })
       .catch((err) => {
         console.log(err);

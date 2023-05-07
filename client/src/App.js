@@ -8,6 +8,9 @@ import Users from "./pages/adminPages/Dashboard/scenes/users/users";
 import Products from "./pages/adminPages/Dashboard/scenes/products/products";
 import Orders from "./pages/adminPages/Dashboard/scenes/orders/orders";
 import AddUser from "./pages/adminPages/Dashboard/scenes/form/AddUser";
+import AddProduct from "./pages/adminPages/Dashboard/scenes/form/AddProduct";
+import CategoriesChart from "./pages/adminPages/Dashboard/scenes/categoriesChart/CategoriesChart";
+import SalesChart from "./pages/adminPages/Dashboard/scenes/salesChart/SalesChart";
 
 function App() {
   return (
@@ -20,7 +23,10 @@ function App() {
             <Route path="users" element={<Users />} />
             <Route path="products" element={<Products />} />
             <Route path="orders" element={<Orders />} />
-            <Route path="addUser" element={<AddUser />} />
+            <Route path="adduser" element={<AddUser />} />
+            <Route path="addproduct" element={<AddProduct />} />
+            <Route path="categorieschart" element={<CategoriesChart />} />
+            <Route path="saleschart" element={<SalesChart />} />
           </Route>
         </Routes>
       </div>
