@@ -18,9 +18,15 @@ module.exports = {
     const salt = genSaltSync(10);
     //Password encryption
     body.password = hashSync(body.password, salt);
+
+    const username = body.username;
+    const password = body.password;
+    const role = body.role;
+    const email = body.email;
+    const address = body.address;
+
     create(body, (err, results) => {
       if (err) {
-        console.log(err);
         return res.status(500).json({
           success: 0,
           message: "Database connection error",
@@ -67,6 +73,7 @@ module.exports = {
     const body = req.body;
     const salt = genSaltSync(10);
     body.password = hashSync(body.password, salt);
+
     updateUser(body, (err, results) => {
       if (err) {
         console.log(err);
@@ -105,6 +112,10 @@ module.exports = {
   },
   login: (req, res) => {
     const body = req.body;
+
+    const email = body.email;
+    const password = body.password;
+
     getUserbyEmail(body.email, (err, results) => {
       if (err) {
         console.log(err);
@@ -133,5 +144,5 @@ module.exports = {
         });
       }
     });
-  }
+  },
 };

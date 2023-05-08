@@ -8,8 +8,8 @@ export const NavbarData = [
         link: "/Home"
     },
     {
-        title:"About",
+        title:"Exemple",
         icon:<GiPositionMarker size={20}/>,
-        link: "/About"
+        link: "/Exemple"
     },
 ];   
