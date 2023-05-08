@@ -9,7 +9,7 @@ const {
 const router = require("express").Router();
 const { checkToken } = require("../../auth/token_validation");
 
-router.post("/create", checkToken, createProduct);
+router.post("/create", createProduct);
 router.get("/products", getProducts);
 router.put("/product", checkToken, updateProduct);
 router.delete("/product", checkToken, deleteProduct);
