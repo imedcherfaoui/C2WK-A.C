@@ -53,13 +53,6 @@
   padding-left: 20px;
 }
 
-.deco {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin-left: 20px;
-}
 
 .left-nav::before {
   content: '';
@@ -100,9 +93,6 @@
     padding-left: 0;
   }
 
-  .deco {
-    margin-left: 0;
-  }
 
   .left-nav::before {
     display: none;

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function Home() {
+
+  
   return (
     <div>
       <h1>Welcome to the home page!</h1>
