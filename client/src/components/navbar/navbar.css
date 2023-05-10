@@ -1,0 +1,100 @@
+.sidebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0px 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: 'Trebuchet MS';
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.sidebar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000000;
+}
+
+.Logo {
+  height: 40px;
+  border-right: 2px solid #000000;
+  padding-right: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.sidebarList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-sidebar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-sidebar div {
+  margin-right: 100px;
+}
+
+.left-nav {
+  background-color: transparent;
+  position: relative;
+  padding-left: 20px;
+}
+
+
+.left-nav::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 20px;
+  background-color: #000000;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .Logo {
+    margin: 0;
+    margin-bottom: 20px;
+    border: none;
+    padding-right: 0;
+  }
+
+  .sidebarList {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .menu-sidebar div {
+    margin-right: 0;
+  }
+
+  .left-nav {
+    padding-left: 0;
+  }
+
+
+  .left-nav::before {
+    display: none;
+  }
+}
